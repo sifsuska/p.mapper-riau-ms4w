@@ -1,0 +1,43 @@
+
+
+BACADAKU
+
+Peta riau_266x204 ini memiliki extent sebagai berikut:
+  EXTENT 99.1719509401651 -1.53723601136328 104.941771306549 2.88266411835743
+
+  
+Namun, ternyata p.mapper membutuhkan peta dalam satuan meter agar gampang
+dalam pengukuran jarak.
+
+Untuk itu, gunakan proj4.js untuk mengkonvert koordinat tadi
+
+
+```js
+	var riauMin =proj4('EPSG:4326',"+proj=utm +zone=47 +datum=WGS84 +units=m +no_defs ",[99.1719509401651, -1.53723601136328]);
+	var riauMax =proj4('EPSG:4326',"+proj=utm +zone=47 +datum=WGS84 +units=m +no_defs ",[104.941771306549 ,2.88266411835743]);
+```
+
+sehingga, extent yang baru adalah:
+
+  EXTENT 519127.02320783 -169911.94650867375 1161528.0897290842 320353.4593739269
+
+  
+FYI
+
+EPSG yang secara default didukung oleh proj4 hanyalah:
+a("EPSG:4326","+title=WGS 84 (long/lat) +proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees"),
+a("EPSG:4269","+title=NAD83 (long/lat) +proj=longlat +a=6378137.0 +b=6356752.31414036 +ellps=GRS80 +datum=NAD83 +units=degrees"),
+a("EPSG:3857","+title=WGS 84 / Pseudo-Mercator +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs"),
+a.WGS84=a["EPSG:4326"],
+a["EPSG:3785"]=a["EPSG:3857"],
+a.GOOGLE=a["EPSG:3857"],
+a["EPSG:900913"]=a["EPSG:3857"],
+a["EPSG:102113"]=a["EPSG:3857"]
+
+karena tidak didukung secara default, kita perlu menuliskan langsung
+format Proj4 nya, yaitu:
+
+"+proj=utm +zone=47 +datum=WGS84 +units=m +no_defs "
+untuk UTM Zona 47 North,
+untuk lebih lengkap, di MS4W ada list di /ms4w/proj/nad/epsg
+  

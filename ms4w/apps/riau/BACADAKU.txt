@@ -1,0 +1,43 @@
+
+
+folder public untuk menyimpan berkas yang diakses oleh public, yaitu file PHP,
+HTML, CSS, JavaScript, Images
+
+semua isinya adalah 
+based on pmapper 4.3.2
+
+
+
+Sedangkan folder data adalah tempat menyimpan shape, symbols, fonts yang dibutuhkan oleh 
+MapServer
+
+
+Perhatikan bahwa Anda harus terinstall fonts agar sesuai dengan yang diharapkan
+Fonts tidak disertakan di sini, terkendala lisensi
+
+
+
+Regards,
+
+Muhammad Jazman, S.Kom.,MInfoSys, MCTS
+NIP. 198206042015031004
+WA +62 812 1012 7812
+email: kampar@gmail.com
+
+
+
+
+
+
+
+
+
+ps:
+untuk membuat reference map, dapat diikuti link berikut:
+sesuaikan port MS4W anda, default adalah 80, tapi saya biasa
+mengajarkan mahasiswa saya untuk menggunakan port 81 agar tidak
+bentrok dengan XAMPP
+
+
+http://localhost:81/cgi-bin/mapserv.exe?map=/ms4w/apps/riau/data/ref.map&layer=riaukec2016&mode=map
+

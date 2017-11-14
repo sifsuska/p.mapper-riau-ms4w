@@ -1,0 +1,12 @@
+PERHATIKAN
+
+bahwa file font.list dan symbols.sym merupakan yang dibutuhkan oleh MapManager
+
+SET PATH font.list Anda sesuai dengan font Anda
+default adalah Ms Windows di C:\Windows\Fonts\
+
+
+
+Regards,
+
+Muhammad Jazman

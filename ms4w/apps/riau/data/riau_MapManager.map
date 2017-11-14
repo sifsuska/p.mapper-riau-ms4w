@@ -1,0 +1,215 @@
+MAP
+  DEFRESOLUTION 96
+  EXTENT 98.3497513477551 -1.41327748792894 105.489708652244 3.21013748792894
+  FONTSET "D:\\w32\\MapManager\\templates\\font.list"
+  IMAGETYPE "png24"
+  NAME "MS"
+  RESOLUTION 96
+  SHAPEPATH ""
+  SIZE 977 633
+  STATUS ON
+  SYMBOLSET "D:\\w32\\MapManager\\templates\\symbols.sym"
+  UNITS DD
+
+  OUTPUTFORMAT
+    NAME "png24"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGBA
+    TRANSPARENT TRUE
+  END # OUTPUTFORMAT
+
+  OUTPUTFORMAT
+    NAME "print"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGB
+    TRANSPARENT FALSE
+  END # OUTPUTFORMAT
+
+  PROJECTION
+    "proj=longlat"
+    "datum=WGS84"
+    "no_defs"
+  END # PROJECTION
+  LEGEND
+    KEYSIZE 20 10
+    KEYSPACING 5 5
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    STATUS OFF
+  END # LEGEND
+
+  QUERYMAP
+    SIZE -1 -1
+    STATUS OFF
+    STYLE HILITE
+  END # QUERYMAP
+
+  SCALEBAR
+    INTERVALS 4
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    SIZE 200 3
+    STATUS OFF
+    UNITS MILES
+  END # SCALEBAR
+
+  WEB
+    METADATA
+      "distance_units"	"MS_METERS"
+      "mapmanager_version"	"1.0.0.0"
+      "coordsys_name"	"Longitude-Latitude / WGS 84"
+    END # METADATA
+  END # WEB
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\riau\\data\\riaukec2016.shp"
+    CONNECTIONTYPE OGR
+    METADATA
+      "coordsys_name"	"Longitude-Latitude / WGS 84"
+    END # METADATA
+    NAME "riaukec2016"
+    PROJECTION
+      "proj=longlat"
+      "datum=WGS84"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query.html"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "BENGKALIS"
+      EXPRESSION ("[nm_kabkota]" ="BENGKALIS")
+      STYLE
+        COLOR 137 237 169
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "DUMAI"
+      EXPRESSION ("[nm_kabkota]" ="DUMAI")
+      STYLE
+        COLOR 62 223 26
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "INDRAGIRI HILIR"
+      EXPRESSION ("[nm_kabkota]" ="INDRAGIRI HILIR")
+      STYLE
+        COLOR 101 47 209
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "INDRAGIRI HULU"
+      EXPRESSION ("[nm_kabkota]" ="INDRAGIRI HULU")
+      STYLE
+        COLOR 201 64 228
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KAMPAR"
+      EXPRESSION ("[nm_kabkota]" ="KAMPAR")
+      STYLE
+        COLOR 42 236 201
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KEPULAUAN MERANTI"
+      EXPRESSION ("[nm_kabkota]" ="KEPULAUAN MERANTI")
+      STYLE
+        COLOR 213 41 156
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KOTA PEKANBARU"
+      EXPRESSION ("[nm_kabkota]" ="KOTA PEKANBARU")
+      STYLE
+        COLOR 20 53 218
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KUANTAN SINGINGI"
+      EXPRESSION ("[nm_kabkota]" ="KUANTAN SINGINGI")
+      STYLE
+        COLOR 235 42 78
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "PELALAWAN"
+      EXPRESSION ("[nm_kabkota]" ="PELALAWAN")
+      STYLE
+        COLOR 152 214 18
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "ROKAN HILIR"
+      EXPRESSION ("[nm_kabkota]" ="ROKAN HILIR")
+      STYLE
+        COLOR 95 174 213
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "ROKAN HULU"
+      EXPRESSION ("[nm_kabkota]" ="ROKAN HULU")
+      STYLE
+        COLOR 236 95 29
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "SIAK"
+      EXPRESSION ("[nm_kabkota]" ="SIAK")
+      STYLE
+        COLOR 212 176 14
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+END # MAP

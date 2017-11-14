@@ -1,0 +1,127 @@
+<pmapper>
+    <ini>
+        <pmapper>
+            <pmTitle>Riau</pmTitle>
+            <debugLevel>3</debugLevel>
+            <plugins>export</plugins>
+            <plugins>scalebar</plugins>
+            <plugins>transparency</plugins>
+            <plugins>proj4js</plugins>
+            <!--
+			<plugins>coordinates</plugins>
+			-->
+            
+        </pmapper>
+        <config>
+            <pm_config_location>default</pm_config_location>
+            <pm_javascript_location>javascript</pm_javascript_location>
+            <pm_print_configfile>common/print.xml</pm_print_configfile>
+            <pm_search_configfile>inline</pm_search_configfile>
+        </config>
+        <map>
+            <mapFile>riau.map</mapFile>
+            <tplMapFile>common/template.map</tplMapFile>
+            <categories>
+                <category name="cat_admin">
+                    <group>Kabupaten_Kota</group>
+                </category>
+                <category name="cat_nature">
+                </category>
+                <category name="cat_raster">
+                </category>
+            </categories>
+            <allGroups>
+                <group>Kabupaten_Kota</group>
+
+            </allGroups>
+            <defGroups>
+                <group>Kabupaten_Kota</group>
+			
+            </defGroups>
+            <layerAutoRefresh>1</layerAutoRefresh>
+            <imgFormat>png8</imgFormat>
+            <altImgFormat>jpeg</altImgFormat>
+            <!--
+            <altImgFormatLayers>
+                <layer>jpl_wms_global_mosaic</layer>
+                <layer>dem</layer>
+            </altImgFormatLayers>
+            -->
+            <sliderMax>max</sliderMax>
+            <sliderMin>100000</sliderMin>
+        </map>
+        <query>
+            <limitResult>300</limitResult>
+            <highlightColor>0 255 255</highlightColor>
+            <highlightSelected>1</highlightSelected>
+            <autoZoom>nquery</autoZoom>
+            <autoZoom>search</autoZoom>
+            <zoomAll>search</zoomAll>
+            <zoomAll>nquery</zoomAll>
+            <infoWin>dynwin</infoWin>
+            <alignQueryResults>1</alignQueryResults>
+            <pointBuffer>10000</pointBuffer>
+            <shapeQueryBuffer>0.02</shapeQueryBuffer>
+        </query>
+        <ui>
+            <tocStyle>tree</tocStyle>
+            <legendStyle>attached</legendStyle>
+            <useCategories>1</useCategories>
+            <catWithCheckbox>1</catWithCheckbox>
+            <scaleLayers>1</scaleLayers>
+            <icoW>18</icoW>
+            <icoH>14</icoH> 
+			<legendKeyimageRewrite>0</legendKeyimageRewrite>
+        </ui>
+        <locale>
+            <defaultLanguage>id</defaultLanguage>
+            <defaultCharset>UTF-8</defaultCharset>
+            <map2unicode>1</map2unicode>
+        </locale>
+        <print>
+            <printImgFormat>png</printImgFormat>
+            <printAltImgFormat>jpeg</printAltImgFormat>
+            <pdfres>2</pdfres>
+        </print>
+        <download>
+            <dpiLevels>150</dpiLevels>
+            <dpiLevels>200</dpiLevels>
+            <dpiLevels>300</dpiLevels>
+        </download>
+        <php>
+            <pearDbClass>MDB2</pearDbClass>
+            <defaultTimeZone>Asia/Jakarta</defaultTimeZone>
+        </php>
+        <pluginsConfig>
+            <export>
+                <formats>XLS</formats>
+                <formats>CSV</formats>
+                <formats>PDF</formats>
+            </export>
+        </pluginsConfig>
+    </ini>
+    
+    
+    
+    <searchlist version="1.0">
+        <dataroot>$</dataroot>
+		<searchitem name="kecamatan" description="Cari Kecamatan">
+            <layer type="shape" name="Kabupaten_Kota">
+                <field type="s" name="nm_keca" description="Nama Kecamatan"  wildcard="0" />
+            </layer>
+        </searchitem>
+
+        <!-- Sample for suggest function -->
+        <searchitem name="kecamatan_suggest" description="Awal Nama Kecamatan">
+            <layer type="ms" name="Kabupaten_Kota">
+                <field type="s" name="nm_keca" description="Awalan Nama Kecamatan" wildcard="2">
+                    <definition type="suggest" connectiontype="ms" minlength="1" startleft="1" sort="asc">
+                        <mslayer encoding="UTF-8"/>
+                    </definition>
+                </field> 
+            </layer>
+        </searchitem>
+    </searchlist>
+    
+    
+</pmapper>

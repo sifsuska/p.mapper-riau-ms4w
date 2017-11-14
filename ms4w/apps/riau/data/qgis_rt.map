@@ -1,0 +1,212 @@
+MAP
+  FONTSET "[fontsetpath]"
+  EXTENT 100.024848838 -1.1222728199987 103.814610928618 2.91912799999944
+  IMAGETYPE "png"
+  NAME "QGIS-MAP"
+  SIZE 600 600
+  STATUS ON
+  UNITS DD
+
+  OUTPUTFORMAT
+    NAME "png"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGB
+    TRANSPARENT FALSE
+  END # OUTPUTFORMAT
+
+  PROJECTION
+    "proj=longlat"
+    "datum=WGS84"
+    "no_defs"
+  END # PROJECTION
+  LEGEND
+    KEYSIZE 20 20
+    KEYSPACING 5 5
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    STATUS OFF
+  END # LEGEND
+
+  QUERYMAP
+    SIZE -1 -1
+    STATUS OFF
+    STYLE HILITE
+  END # QUERYMAP
+
+  SCALEBAR
+    INTERVALS 4
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    SIZE 200 3
+    STATUS OFF
+    UNITS MILES
+  END # SCALEBAR
+
+  WEB
+    FOOTER ""
+    HEADER ""
+    TEMPPATH ""
+    METADATA
+      "ows_onlineresource"	"http://localhost:81/cgi-bin/mapserv?map=D:/ms4w/apps/riau/data/qgis_rt.map"
+      "ows_enable_request"	"*"
+      "wfs_encoding"	"UTF-8"
+      "ows_title"	"QGIS-MAP"
+    END # METADATA
+    TEMPLATE "[templatepath]"
+  END # WEB
+
+  LAYER
+    DATA "D:/ms4w/apps/riau/data/riaukec2016.shp"
+    EXTENT 100.024848838 -1.1222728199987 103.814610928618 2.91912799999944
+    METADATA
+      "ows_include_items"	"all"
+      "ows_extent"	"100.024848838 -1.12227282 103.814610929 2.919128"
+      "ows_srs"	"EPSG:4326"
+      "ows_title"	"Riau Kabupaten Kota"
+      "wms_getfeatureinfo_formatlist"	"OGRGML"
+      "wms_bbox_extended"	"true"
+      "gml_include_items"	"all"
+    END # METADATA
+    NAME "Riau Kabupaten Kota"
+    PROJECTION
+      "proj=longlat"
+      "datum=WGS84"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "BENGKALIS"
+      EXPRESSION ("[nm_kabkota]" ="BENGKALIS")
+      STYLE
+        COLOR 137 237 169
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "DUMAI"
+      EXPRESSION ("[nm_kabkota]" ="DUMAI")
+      STYLE
+        COLOR 62 223 26
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "INDRAGIRI HILIR"
+      EXPRESSION ("[nm_kabkota]" ="INDRAGIRI HILIR")
+      STYLE
+        COLOR 101 47 209
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "INDRAGIRI HULU"
+      EXPRESSION ("[nm_kabkota]" ="INDRAGIRI HULU")
+      STYLE
+        COLOR 201 64 228
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KAMPAR"
+      EXPRESSION ("[nm_kabkota]" ="KAMPAR")
+      STYLE
+        COLOR 42 236 201
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KEPULAUAN MERANTI"
+      EXPRESSION ("[nm_kabkota]" ="KEPULAUAN MERANTI")
+      STYLE
+        COLOR 213 41 156
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KOTA PEKANBARU"
+      EXPRESSION ("[nm_kabkota]" ="KOTA PEKANBARU")
+      STYLE
+        COLOR 20 53 218
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "KUANTAN SINGINGI"
+      EXPRESSION ("[nm_kabkota]" ="KUANTAN SINGINGI")
+      STYLE
+        COLOR 235 42 78
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "PELALAWAN"
+      EXPRESSION ("[nm_kabkota]" ="PELALAWAN")
+      STYLE
+        COLOR 152 214 18
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "ROKAN HILIR"
+      EXPRESSION ("[nm_kabkota]" ="ROKAN HILIR")
+      STYLE
+        COLOR 95 174 213
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "ROKAN HULU"
+      EXPRESSION ("[nm_kabkota]" ="ROKAN HULU")
+      STYLE
+        COLOR 236 95 29
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+    CLASS
+      NAME "SIAK"
+      EXPRESSION ("[nm_kabkota]" ="SIAK")
+      STYLE
+        COLOR 212 176 14
+      END # STYLE
+      STYLE
+        OUTLINECOLOR 0 0 1
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+END # MAP
